@@ -27,9 +27,9 @@
         <form action="UpdateUser" method="post">
             <tr>
                 <td><input type="text" value="${U.id}" name="id" ></td>
-                <td><input type="text" value="${U.name}" name="username"></td>
+                <td><input type="text" value="${U.username}" name="username"></td>
                 <td><input type="text" value="${U.sex}" name="sex"></td>
-                <td><input type="text" value="${U.pwd}" name="password"></td>
+                <td><input type="text" value="${U.password}" name="password"></td>
                 <td><input type="text" value="${U.email}" name="email"></td>
                 <td><a href="DeleteUser?id=${U.id}">删除</a>  <input type="submit" value="更新"/></td>
             </tr>

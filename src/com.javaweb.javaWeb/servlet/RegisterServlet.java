@@ -21,14 +21,14 @@ public class RegisterServlet extends HttpServlet {
         String name = request.getParameter("name"); //获取jsp页面传过来的参数
         String pwd = request.getParameter("pwd");
         String sex = request.getParameter("sex");
-        String home = request.getParameter("email");
+        String email = request.getParameter("email");
 
 
         User user = new User(); //实例化一个对象，组装属性
         user.setUsername(name);
         user.setPassword(pwd);
         user.setSex(sex);
-        user.setEmail(home);
+        user.setEmail(email);
 
         UserDao ud = new UserDaoImpl();
 

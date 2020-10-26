@@ -33,8 +33,8 @@ public class UserDaoImpl implements UserDao {
     public boolean register(User user) {
         boolean flag = false;
         DBconn.init();
-        int i =DBconn.addUpdDel("insert into user(username,password,sex,email) " +
-                "values('"+user.getUsername()+"','"+user.getPassword()+"','"+user.getSex()+"','"+user.getEmail());
+        int i =DBconn.addUpdDel("insert into user(username,password,sex,email)" +
+                "values('"+user.getUsername()+"','"+user.getPassword()+"','"+user.getSex()+"','"+user.getEmail()+"')");
         if(i>0){
             flag = true;
         }
