@@ -3,6 +3,7 @@ package com.javaweb.javaWeb.servlet;
 import com.javaweb.javaWeb.entity.User;
 import com.javaweb.javaWeb.dao.UserDao;
 import com.javaweb.javaWeb.dao.impl.UserDaoImpl;
+import com.javaweb.javaWeb.util.SHA;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,10 +24,11 @@ public class RegisterServlet extends HttpServlet {
         String sex = request.getParameter("sex");
         String email = request.getParameter("email");
 
+        String password = SHA.getSHA256(pwd);
 
         User user = new User(); //实例化一个对象，组装属性
         user.setUsername(name);
-        user.setPassword(pwd);
+        user.setPassword(password);
         user.setSex(sex);
         user.setEmail(email);
 

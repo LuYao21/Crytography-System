@@ -2,6 +2,7 @@ package com.javaweb.javaWeb.servlet;
 
 import com.javaweb.javaWeb.dao.UserDao;
 import com.javaweb.javaWeb.dao.impl.UserDaoImpl;
+import com.javaweb.javaWeb.util.SHA;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,9 +22,11 @@ public class LoginServlet extends HttpServlet { //需要继承HttpServlet  并�
         String name = request.getParameter("name"); //得到jsp页面传过来的参数
         String pwd = request.getParameter("pwd");
 
+        String password = SHA.getSHA256(pwd);
+
         UserDao ud = new UserDaoImpl();
 
-        if(ud.login(name, pwd)){
+        if(ud.login(name, password)){
             request.setAttribute("xiaoxi", "欢迎用户"+name); //向request域中放置信息
             request.getRequestDispatcher("/success.jsp").forward(request, response);//转发到成功页面
         }else{
