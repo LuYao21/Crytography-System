@@ -12,5 +12,6 @@
 <body>
 ${xiaoxi} <br>
 <a href="FindUserList">查看所有用户</a>
+<a href="AES.jsp">AES对称加密</a>
 </body>
 </html>

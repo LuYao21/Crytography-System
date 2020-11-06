@@ -12,10 +12,12 @@ import java.io.IOException;
 
 
 public class UpdateUserServlet extends HttpServlet {
+
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doPost(request, response);
     }
+
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 

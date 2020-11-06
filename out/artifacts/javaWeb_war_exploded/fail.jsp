@@ -9,6 +9,6 @@
     <title>失败</title>
 </head>
 <body>
-<h1>失败</h1>
+<h1>登录失败</h1>
 </body>
 </html>
