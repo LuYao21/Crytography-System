@@ -23,7 +23,6 @@ public class RegisterServlet extends HttpServlet {
         String pwd = request.getParameter("pwd");
         String sex = request.getParameter("sex");
         String email = request.getParameter("email");
-
         String password = SHA.getSHA256(pwd);
 
         User user = new User(); //实例化一个对象，组装属性
